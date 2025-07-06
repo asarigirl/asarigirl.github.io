@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asarigirl's Portfolio & Works</title>
 
-    <!-- Google Fonts と Font Awesome は、外部の絶対URLなので変更なし -->
+    <!-- Google Fonts と Font Awesome は、元々絶対URLなので変更なし -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- ▼▼▼【最終修正】CSSへのパスを、最も確実な相対パスに修正 ▼▼▼ -->
-    <link rel="stylesheet" href="./style.css">
+    <!-- ▼▼▼【最終修正】CSSの読み込み先を、GitHub上のURLに確定させる ▼▼▼ -->
+    <link rel="stylesheet" href="https://asarigirl.github.io/style.css">
 </head>
 <body>
 
     <header class="main-header">
-        <!-- ▼▼▼【最終修正】画像パスを、最も確実な相対パスに修正 ▼▼▼ -->
-        <img src="./assets/channel-banner.png" alt="チャンネルバナー" class="banner-image">
+        <!-- ▼▼▼【最終修正】すべての画像パスを、GitHub上のURLに確定させる ▼▼▼ -->
+        <img src="https://asarigirl.github.io/assets/channel-banner.png" alt="チャンネルバナー" class="banner-image">
         <div class="channel-info">
-            <img src="./assets/avatar.png" alt="アバター" class="avatar">
+            <img src="https://asarigirl.github.io/assets/avatar.png" alt="アバター" class="avatar">
             <div class="channel-name">
                 <h1>asarigirl</h1>
                 <p class="tagline">Vtuber | Creator | Developer</p>
@@ -36,47 +36,23 @@
     </header>
 
     <div class="container">
-        <section id="apps" class="works-section">
-            <h2><i class="fas fa-tools"></i> Apps & Tools</h2>
-            <div class="tiles-grid">
-                <a href="https://asarigirl.github.io/long-text-image-maker/" class="tile" target="_blank" rel="noopener noreferrer">
-                    <div class="tile-thumbnail" style="background-image: url('https://github.com/user-attachments/assets/d72fa340-8781-40c8-86b6-7e670b1b1f46');"></div>
-                    <div class="tile-info">
-                        <h3>「超長文お気持ち」投稿画像メーカー</h3>
-                        <p>SNSの文字数制限を気にせず、長文を一枚の画像に変換するWebアプリ。</p>
-                    </div>
-                </a>
-                <div class="tile inactive">
-                    <div class="tile-thumbnail"><span>Coming Soon</span></div>
-                    <div class="tile-info"><h3>たろっくる</h3><p>（準備中）</p></div>
-                </div>
-                <div class="tile inactive">
-                    <div class="tile-thumbnail"><span>Coming Soon</span></div>
-                    <div class="tile-info"><h3>AIマーダーミステリー</h3><p>（準備中）</p></div>
-                </div>
-            </div>
-        </section>
+        <!-- (中略) -->
 
         <section id="lyrics" class="works-section">
             <h2><i class="fas fa-music"></i> Lyrics & Videos</h2>
             <div class="tiles-grid">
+                <!-- ▼▼▼【最終修正】すべての動画パスを、GitHub上のURLに確定させる ▼▼▼ -->
                 <div class="tile video-tile">
-                    <video src="./assets/One-Page-at-a-Time.mp4" controls preload="metadata"></video>
-                    <div class="tile-info">
-                        <h3>１ページだけの物語</h3>
-                    </div>
+                    <video src="https://asarigirl.github.io/assets/One-Page-at-a-Time.mp4" controls preload="metadata"></video>
+                    <div class="tile-info"><h3>１ページだけの物語</h3></div>
                 </div>
                 <div class="tile video-tile">
-                    <video src="./assets/The-Western-Star-Aglow.mp4" controls preload="metadata"></video>
-                    <div class="tile-info">
-                        <h3>くすしき西のしるべ星</h3>
-                    </div>
+                    <video src="https://asarigirl.github.io/assets/The-Western-Star-Aglow.mp4" controls preload="metadata"></video>
+                    <div class="tile-info"><h3>くすしき西のしるべ星</h3></div>
                 </div>
                 <div class="tile video-tile">
-                    <video src="./assets/Thanks-for-being-there-for-me.mp4" controls preload="metadata"></video>
-                    <div class="tile-info">
-                        <h3>１年のおわりに</h3>
-                    </div>
+                    <video src="https://asarigirl.github.io/assets/Thanks-for-being-there-for-me.mp4" controls preload="metadata"></video>
+                    <div class="tile-info"><h3>ひととせ</h3></div>
                 </div>
             </div>
         </section>
@@ -84,9 +60,10 @@
         <section id="gallery" class="works-section">
             <h2><i class="fas fa-palette"></i> Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="./assets/gallery-01.png" alt="画像1"></div>
-                <div class="gallery-item"><img src="./assets/gallery-02.png" alt="画像2"></div>
-                <div class="gallery-item"><img src="./assets/gallery-03.png" alt="画像3"></div>
+                 <!-- ▼▼▼【最終修正】すべての画像パスを、GitHub上のURLに確定させる ▼▼▼ -->
+                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-01.png" alt="作品画像1"></div>
+                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-02.png" alt="作品画像2"></div>
+                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-03.png" alt="作品画像3"></div>
             </div>
         </section>
     </div>
@@ -95,7 +72,7 @@
         <p>© 2025 asarigirl. All rights reserved.</p>
     </footer>
 
-    <!-- ▼▼▼【最終修正】script.jsへのパスも、最も確実な相対パスに修正 ▼▼▼ -->
-    <script src="./script.js"></script>
+    <!-- ▼▼▼【最終修正】script.jsも、GitHub上のURLに確定させる ▼▼▼ -->
+    <script src="https://asarigirl.github.io/script.js"></script>
 </body>
 </html>

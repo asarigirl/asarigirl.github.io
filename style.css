@@ -1,0 +1,238 @@
+/* === asarigirl's Portfolio - Final Version === */
+
+:root {
+    --bg-color: #fdfdfa;
+    --card-bg: #ffffff;
+    --text-primary: #4a4a4a;
+    --text-secondary: #7a7a7a;
+    --accent-pink: #e68c9c;
+    --accent-green: #a8e6a4;
+    --border-color: #f0f0f0;
+    --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.channel-header {
+    position: relative;
+    background-color: #e9ecef; /* 画像が読み込まれるまでの、控えめな背景色 */
+}
+
+.banner-image {
+    width: 100%;
+    height: 35vh; /* 画面の高さの35%をバナー領域とする */
+    object-fit: cover; /* 画像をコンテナに合わせて、中央から切り取る */
+    display: block;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    transform: translateY(-50%); /* バナー画像に半分重なるように、上に引き上げる */
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-right: 25px;
+    flex-shrink: 0; /* 画面が縮んでも、アバターが小さくならないようにする */
+}
+
+.channel-name h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tagline {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--text-secondary);
+}
+
+.social-links {
+    margin-left: auto; /* 右寄せにする */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.social-btn.x { background-color: #1DA1F2; }
+.social-btn.youtube { background-color: #FF0000; }
+
+.social-text {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 15px; background-color: #5865F2; /* Discord color */
+    color: #fff; border-radius: 22px; font-weight: 700;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    /* バナーに重なっている分、上のマージンを調整 */
+    margin-top: -80px; 
+}
+
+.works-section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-bottom: 3px solid var(--accent-pink);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+h2 .fas {
+    margin-right: 12px;
+    color: var(--accent-pink);
+}
+
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.tile {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.tile-thumbnail {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9のアスペクト比を維持 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.tile-thumbnail span {
+    color: #aaa;
+    font-weight: 700;
+}
+
+.tile-info {
+    padding: 20px;
+    flex-grow: 1; /* タイルの高さを揃えるための設定 */
+}
+.tile-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+}
+.tile-info p {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--text-secondary);
+}
+
+.tile.inactive {
+    cursor: not-allowed;
+}
+.tile.inactive:hover {
+    transform: none;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+.tile.inactive .tile-info h3, .tile.inactive .tile-info p {
+    color: #ccc;
+}
+
+.video-tile video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1; /* 正方形にする */
+}
+
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .channel-info {
+        flex-direction: column;
+        transform: translateY(-60px);
+        text-align: center;
+    }
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 15px 0;
+    }
+    .channel-name {
+        margin-bottom: 20px;
+    }
+    .social-links {
+        margin: 0;
+    }
+    .container {
+        margin-top: -40px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .tiles-grid {
+        grid-template-columns: 1fr; /* スマホでは1列にする */
+    }
+}
