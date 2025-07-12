@@ -155,35 +155,6 @@ h2 .fas {
     gap: 30px;
 }
 
-.tile-group {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px var(--shadow-color);
-    border: 1px solid var(--border-color);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0; /* 下部の余白をなくす */
-}
-
-.tile-group .tile {
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    flex-grow: 1; /* アプリ紹介部分が残りのスペースを埋めるように */
-}
-
-.tile-group .tile:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.tile-group .x-embed-tile {
-    padding: 20px;
-    border-top: 1px solid var(--border-color);
-    margin-top: auto; /* X埋め込みを下に寄せる */
-}
-
 .tile {
     background-color: var(--card-bg);
     border-radius: 15px;
@@ -195,10 +166,51 @@ h2 .fas {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--border-color);
+    padding: 0;
 }
 .tile:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.tile .app-info {
+    padding: 20px 25px 15px 25px;
+}
+
+.tile .app-info h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.3em;
+}
+
+/* === MODIFIED: Link color === */
+.tile .app-info h3 a {
+    color: #BFAB90; /* Set specified link color */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tile .app-info h3 a:hover {
+    color: var(--accent-pink);
+    text-decoration: underline;
+}
+/* === END OF MODIFICATION === */
+
+.tile .tweet-label {
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.tile .tweet-label .fa-x-twitter {
+    margin-right: 8px;
+    color: #555;
+}
+
+.tile .x-embed-content {
+    padding: 0 20px 20px 20px;
 }
 
 .tile-thumbnail {
@@ -341,9 +353,6 @@ h2 .fas {
 }
 
 /* --- X Embed --- */
-.x-embed-tile {
-    padding: 20px;
-}
 .twitter-tweet {
     margin: 0 !important;
 }
