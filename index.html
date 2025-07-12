@@ -5,39 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asarigirl's Portfolio & Works</title>
 
-    <!-- Google Fonts と Font Awesome は、元々絶対URLなので変更なし -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (アイコン用) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- ▼▼▼【最終修正】すべてのローカルファイルへのパスを、絶対URLに確定させます ▼▼▼ -->
-    <link rel="stylesheet" href="https://asarigirl.github.io/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <img src="https://asarigirl.github.io/assets/channel-banner.png" alt="チャンネルバナー" class="banner-image">
-        <div class="channel-info">
-            <img src="https://asarigirl.github.io/assets/avatar.png" alt="アバター" class="avatar">
-            <div class="channel-name">
-                <h1>asarigirl</h1>
-                <p class="tagline">Vtuber | Creator | Developer</p>
-            </div>
-            <div class="social-links">
-                <a href="https://x.com/asari_girl" class="social-btn x" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com/@asarigirl" class="social-btn youtube" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-                <div class="social-text" title="Discord ID: asari_girl">
-                    <i class="fa-brands fa-discord"></i><span>asari_girl</span>
+    <header class="channel-header">
+        <div class="banner-container">
+            <img src="./assets/channel-banner.png" alt="チャンネルバナー" class="banner-image">
+        </div>
+        <div class="channel-info-container">
+            <div class="channel-info">
+                <img src="./assets/avatar.png" alt="アバター" class="avatar">
+                <div class="channel-name">
+                    <h1>asarigirl</h1>
+                    <p class="tagline">Vtuber | Creator | Developer</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://x.com/asari_girl" class="social-btn x" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@asarigirl" class="social-btn youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/asarigirl" class="social-btn github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <div class="social-text" title="Discord ID: asari_girl">
+                        <i class="fa-brands fa-discord"></i><span>asari_girl</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
+        <!-- 自己紹介ブロック -->
+        <section class="profile-section">
+             <div class="profile-intro">
+                <h2>ふつうのアサリガール（あさこ）</h2>
+                <p>
+                    Vtuberとして活動しながら、「あったらいいな」を形にするWebアプリやツールを開発しています。
+                    作詞やイラストなど、創作活動全般が好きです。お気軽にお声がけください！
+                </p>
+            </div>
+            <div class="profile-details">
+                <div class="tile">
+                    <h3>　✨プロフィール</h3>
+                    <ul>
+                        <li>活動内容: Vtuber, ソフトウェア開発, 作詞</li>
+                        <li>好きなこと: 新しい技術に触れること、物語を作ること、ゲーム（DbD, スプラ３, じゃんたま, OW2）</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <h3>　✨活動実績</h3>
+                    <ul>
+                        <li>Webアプリ開発、作詞</li>
+                        <li>テレビ朝日 メタメタ大作戦 2025 公認配信者
+</li>
+                        <li>テレビ朝日 メタメタ大作戦 2024 公認アンバサダー
+</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- アプリ紹介ブロック -->
         <section id="apps" class="works-section">
             <h2><i class="fas fa-tools"></i> Apps & Tools</h2>
             <div class="tiles-grid">
+
+                <!-- 完成品アプリ -->
                 <a href="https://asarigirl.github.io/long-text-image-maker/" class="tile" target="_blank" rel="noopener noreferrer">
                     <div class="tile-thumbnail" style="background-image: url('https://github.com/user-attachments/assets/d72fa340-8781-40c8-86b6-7e670b1b1f46');"></div>
                     <div class="tile-info">
@@ -45,43 +84,68 @@
                         <p>SNSの文字数制限を気にせず、長文を一枚の画像に変換するWebアプリ。</p>
                     </div>
                 </a>
-                <div class="tile inactive"><div class="tile-thumbnail"><span></span></div><div class="tile-info"><h3>たろっくる</h3><p></p></div></div>
-                <div class="tile inactive"><div class="tile-thumbnail"><span></span></div><div class="tile-info"><h3>AIマーダーミステリー</h3><p></p></div></div>
+
+                <!-- 開発中のアプリ (Xの埋め込み投稿) -->
+                <div class="tile x-embed-tile">
+                    <blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">たろっくる<br>AIのべりすと専用TRPGオンラインセッションツール<br>・ダイスボット機能<br>・チャパレ機能<br>・ルビ振ったり文字に傍点つける機能<br><br>まだテストしてないけど、とりあえず一通りの機能は動くはず！<br>URL先で利用できます↓<a href="https://t.co/dOVxhbFtdC">https://t.co/dOVxhbFtdC</a> <a href="https://t.co/3qCvfxtk42">pic.twitter.com/3qCvfxtk42</a></p>— ふつうのアサリガール (@asari_girl) <a href="https://twitter.com/asari_girl/status/1922432026189131918?ref_src=twsrc%5Etfw">June 7, 2025</a></blockquote>
+                </div>
+
+                <div class="tile x-embed-tile">
+                    <blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">AIマーダーミステリー「悪役令嬢の微笑」<br>とりあえず完成！<br>URLからダウンロードできます（無料）<a href="https://t.co/0VdYyCj9Fk">https://t.co/0VdYyCj9Fk</a><br><br>推奨：AIのべりすとTRPGシナリオモード<br>（うまいことやればほかのAIでもできます） <a href="https://t.co/E4B2jE9yF4">pic.twitter.com/E4B2jE9yF4</a></p>— ふつうのアサリガール (@asari_girl) <a href="https://twitter.com/asari_girl/status/1931845096485609667?ref_src=twsrc%5Etfw">June 18, 2025</a></blockquote>
+                </div>
+
+                <div class="tile x-embed-tile">
+                     <blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">参加型配信予約サポート<br>完成！<br>参加型配信で、だれがどの時間に予約しているか、何人が予約しているかなどを管理できます<br><br>記事で使い方など詳しく解説してます<a href="https://t.co/lqg92n6Gf1">https://t.co/lqg92n6Gf1</a> <a href="https://t.co/MhCjJcI5jS">pic.twitter.com/MhCjJcI5jS</a></p>— ふつうのアサリガール (@asari_girl) <a href="https://twitter.com/asari_girl/status/1937286798151155977?ref_src=twsrc%5Etfw">June 25, 2025</a></blockquote>
+                </div>
+
+                <div class="tile x-embed-tile">
+                    <blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">くろっぷる<br>配信画面でいい感じに画像を切り抜くためのアプリ<br>・画像をドラッグ＆ドロップ<br>・Shiftを押しながらドラッグで画像を切り抜き<br>・Ctrl+Sで切り抜いた画像を保存<br><br>URLから利用できます<a href="https://t.co/xL3kXFkG4w">https://t.co/xL3kXFkG4w</a> <a href="https://t.co/vU9b1T8pWJ">pic.twitter.com/vU9b1T8pWJ</a></p>— ふつうのアサリガール (@asari_girl) <a href="https://twitter.com/asari_girl/status/1929175661165322256?ref_src=twsrc%5Etfw">June 14, 2025</a></blockquote>
+                </div>
             </div>
         </section>
 
+        <!-- 動画（作詞）ブロック -->
         <section id="lyrics" class="works-section">
             <h2><i class="fas fa-music"></i> Lyrics & Videos</h2>
             <div class="tiles-grid">
-                <div class="tile video-tile">
-                    <video src="https://asarigirl.github.io/assets/One-Page-at-a-Time.mp4" controls preload="metadata"></video>
-                    <div class="tile-info"><h3>１ページだけの物語</h3></div>
-                </div>
-                <div class="tile video-tile">
-                    <video src="https://asarigirl.github.io/assets/The-Western-Star-Aglow.mp4" controls preload="metadata"></video>
-                    <div class="tile-info"><h3>くすしき西のしるべ星</h3></div>
-                </div>
-                <div class="tile video-tile">
-                    <video src="https://asarigirl.github.io/assets/Thanks-for-being-there-for-me.mp4" controls preload="metadata"></video>
-                    <div class="tile-info"><h3>ひととせ</h3></div>
-                </div>
+                <div class="tile video-tile"><video src="./assets/one-page-at-a-time.mp4" controls preload="metadata"></video><div class="tile-info"><h3>１ページだけの物語</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/the-western-star-aglow.mp4" controls preload="metadata"></video><div class="tile-info"><h3>くすしき西のしるべ星</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/thanks-for-being-there-for-me.mp4" controls preload="metadata"></video><div class="tile-info"><h3>１年のおわりに</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m1.mp4" controls preload="metadata"></video><div class="tile-info"><h3>粛清ロリ神レクイエム</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m2.mp4" controls preload="metadata"></video><div class="tile-info"><h3>はいよろこんで</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m3.mp4" controls preload="metadata"></video><div class="tile-info"><h3>恋しないんじゃない、できないんです</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m4.mp4" controls preload="metadata"></video><div class="tile-info"><h3>ホワイトデー</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m5.mp4" controls preload="metadata"></video><div class="tile-info"><h3>共通テスト</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m6.mp4" controls preload="metadata"></video><div class="tile-info"><h3>ポッキーの日</h3></div></div>
+                <div class="tile video-tile"><video src="./assets/m7.mp4" controls preload="metadata"></video><div class="tile-info"><h3>参加型配信</h3></div></div>
+                <div class="tile inactive"><div class="tile-thumbnail"><span>Coming Soon</span></div><div class="tile-info"><h3>（次の作品）</h3></div></div>
             </div>
         </section>
 
+        <!-- 画像ブロック -->
         <section id="gallery" class="works-section">
             <h2><i class="fas fa-palette"></i> Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-01.png" alt="作品画像1"></div>
-                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-02.png" alt="作品画像2"></div>
-                <div class="gallery-item"><img src="https://asarigirl.github.io/assets/gallery-03.png" alt="作品画像3"></div>
+                <div class="gallery-item"><img src="./assets/gallery-01.png" alt="作品画像1" data-title="作品画像1"></div>
+                <div class="gallery-item"><img src="./assets/gallery-02.png" alt="作品画像2" data-title="作品画像2"></div>
+                <div class="gallery-item"><img src="./assets/gallery-03.png" alt="作品画像3" data-title="作品画像3"></div>
             </div>
         </section>
     </div>
 
-    <footer class="main-footer">
+    <footer class="site-footer">
         <p>© 2025 asarigirl. All rights reserved.</p>
     </footer>
 
-    <script src="https://asarigirl.github.io/script.js"></script>
+    <!-- ライトボックス用のHTML -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- 外部スクリプト -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
