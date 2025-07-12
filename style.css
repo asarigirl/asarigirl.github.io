@@ -161,12 +161,16 @@ h2 .fas {
     box-shadow: 0 5px 20px var(--shadow-color);
     border: 1px solid var(--border-color);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0; /* 下部の余白をなくす */
 }
 
 .tile-group .tile {
     box-shadow: none;
     border: none;
     border-radius: 0;
+    flex-grow: 1; /* アプリ紹介部分が残りのスペースを埋めるように */
 }
 
 .tile-group .tile:hover {
@@ -177,6 +181,7 @@ h2 .fas {
 .tile-group .x-embed-tile {
     padding: 20px;
     border-top: 1px solid var(--border-color);
+    margin-top: auto; /* X埋め込みを下に寄せる */
 }
 
 .tile {
