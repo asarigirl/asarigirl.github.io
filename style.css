@@ -161,8 +161,6 @@ h2 .fas {
     box-shadow: 0 5px 20px var(--shadow-color);
     border: 1px solid var(--border-color);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 .tile-group .tile {
