@@ -6,6 +6,8 @@
 
 ## サイトを見る
 
-[![asarigirl.github.io](assets/channel-banner.png)](https://asarigirl.github.io/)
+<a href="https://asarigirl.github.io/" target="_blank" rel="noopener noreferrer">
+  <img src="assets/channel-banner.png" alt="asarigirl.github.io">
+</a>
 
-[https://asarigirl.github.io/](https://asarigirl.github.io/)
+<a href="https://asarigirl.github.io/" target="_blank" rel="noopener noreferrer">https://asarigirl.github.io/</a>
